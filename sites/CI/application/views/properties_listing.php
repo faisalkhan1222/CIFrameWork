@@ -15,11 +15,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div>
 	<h4>Data Retrieved From DB</h4>
 
-
-	<h5>Specs of Homes</h5>
 	<?php
 		for($i=0; $i<sizeof($names); $i++){
-			echo $names[$i]."</br>";
+			echo "<h3>Specs </h3>".$names[$i];
+			echo "<h3>Description </h3>".$description[$i];
+			echo "<h3>City </h3>".$city[$i];
+			echo "<h3>Zip </h3>".$zip[$i];
+			echo $image[$i]."</br>";
+			echo "<h1>----------------------------------------------</h1>";
 		}
 	?>
 	<h2>Next Step is to read all the data from DB and make a better view</h2>
