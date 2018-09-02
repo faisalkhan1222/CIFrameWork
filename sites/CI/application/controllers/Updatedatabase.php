@@ -22,6 +22,11 @@ class Updatedatabase extends CI_Controller {
 	public function updatedata()
 	{
 		$this->load->view('insertdata_form');
+		
+
+		
+		$this->load->model('UpdateData_model');
+		$this->UpdateData_model->insertData();
 
 	}
 }

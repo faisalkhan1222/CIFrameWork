@@ -21,8 +21,6 @@ class SomeListings extends CI_Controller {
 
 	public function index()
 	{
-
-		$this->load->view('insertdata_form');
 		$this->load->model('Properties_model','',TRUE);
 		$names = $this->Properties_model->retrieveProperties();
 		$this->load->view('properties_listing',$names);
