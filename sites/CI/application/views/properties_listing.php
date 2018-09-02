@@ -2,8 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +20,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			echo "<h3>City </h3>".$city[$i];
 			echo "<h3>Zip </h3>".$zip[$i];
 			echo $image[$i]."</br>";
-			echo "<h1>----------------------------------------------</h1>";
+			echo "<h1>--------------------------</h1>";
 		}
 	?>
-	<h2>Next Step is to read all the data from DB and make a better view</h2>
+	<h2> </h2>
 </div>
 
 </body>

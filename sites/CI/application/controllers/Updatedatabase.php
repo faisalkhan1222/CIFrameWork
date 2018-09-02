@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class SomeListings extends CI_Controller {
+class Updatedatabase extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,13 +19,10 @@ class SomeListings extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-	public function index()
+	public function updatedata()
 	{
-
 		$this->load->view('insertdata_form');
-		$this->load->model('Properties_model','',TRUE);
-		$names = $this->Properties_model->retrieveProperties();
-		$this->load->view('properties_listing',$names);
+
 	}
 }
 
