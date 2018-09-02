@@ -23,11 +23,12 @@ class Updatedatabase extends CI_Controller {
 	{
 		$this->load->view('insertdata_form');
 		
-
-		
-		$this->load->model('UpdateData_model');
-		$this->UpdateData_model->insertData();
-
+		if(isset($_GET["name"]) && isset($_GET["description"])){
+			echo "New Name: ".$_GET["name"]."</br>";
+			echo "New Description: ".$_GET["description"]."</br>";
+		}
+		//$this->load->model('UpdateData_model');
+		//$this->UpdateData_model->insertData($_GET["name"]);
 	}
 }
 

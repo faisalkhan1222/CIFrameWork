@@ -12,11 +12,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div>
 	<h4>Update Database</h4>
-<form method="get">
+<form method="get" action="">
 	<label for "name">Name:</label>
-	<input id="name" type="Text"/>
+	<input id="name" name="name" placeholder="Enter The New Name" type="Text"/>
 	<label for "description"> Description: </label>
-	<input id="description" type="Text"/>
+	<input id="description" name="description" placeholder="Enter The New Description" type="Text"/>
 	<input type="submit" value="Save">
 </form>
 </div>
