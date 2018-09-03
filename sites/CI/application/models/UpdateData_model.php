@@ -12,7 +12,6 @@ public function insertData($name, $description){
 		$insertQuery = $this->db->query("UPDATE properties 
 			SET name = '$name', description = '$description'
 		WHERE properties.id=1;");
-
 		//echo"Before Query inside the model";
 		//echo $propertiesArray['names'][0];
 		//echo $property->name."</br>";
