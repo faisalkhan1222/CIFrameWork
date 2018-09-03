@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Updatedatabase extends CI_Controller {
 
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -22,13 +23,17 @@ class Updatedatabase extends CI_Controller {
 	public function updatedata()
 	{
 		$this->load->view('insertdata_form');
-		
+
 		if(isset($_GET["name"]) && isset($_GET["description"])){
-			echo "New Name: ".$_GET["name"]."</br>";
-			echo "New Description: ".$_GET["description"]."</br>";
-		}
-		//$this->load->model('UpdateData_model');
-		//$this->UpdateData_model->insertData($_GET["name"]);
+			$name = $_GET["name"];
+			$desc = $_GET["description"];
+
+//			echo "New Name: ".."</br>";
+//			echo "New Description: ".."</br>";
+			$this->load->model('UpdateData_model', '', TRUE);
+			$this->UpdateData_model->insertData($name,$desc);
+			//redirect('/SomeListings');
+		}	
 	}
 }
 
