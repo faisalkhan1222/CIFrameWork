@@ -17,7 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<input id="name" name="name" placeholder="Enter The New Name" type="Text"/>
 	<label for "description"> Description: </label>
 	<input id="description" name="description" placeholder="Enter The New Description" type="Text"/>
-	<input type="submit" value="Save">
+	<input type ="hidden" name="id" value="someID"/>
+	<input type="submit" value="Save"/>
 </form>
 </div>
 </body>

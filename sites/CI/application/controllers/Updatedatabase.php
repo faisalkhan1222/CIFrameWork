@@ -20,16 +20,14 @@ class Updatedatabase extends CI_Controller {
 
 	public function updatedata()
 	{
-		$this->load->view('insertdata_form');
+		$this->load->model('Properties_model','',TRUE);
+		$names = $this->Properties_model->retrieveProperties();
+		$this->load->view('insertdata_form', $names);
 		if(isset($_GET["name"]) && isset($_GET["description"])){
 			$name = $_GET["name"];
 			$desc = $_GET["description"];
-			//echo "New Name: ".."</br>";
-			//echo "New Description: ".."</br>";
 			$this->load->model('UpdateData_model', '', TRUE);
 			$this->UpdateData_model->insertData($name,$desc);
-
-			$this->load->model('Properties_model','',TRUE);
 			$names = $this->Properties_model->retrieveProperties();
 			$this->load->view('properties_listing',$names);
 		}	

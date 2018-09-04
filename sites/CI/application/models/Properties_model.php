@@ -7,6 +7,7 @@ class Properties_model extends CI_Model{
 public function retrieveProperties(){
 	//echo"Before Query inside the model";
 	$propertiesArray = array();
+	$propertiesArray['id'] = array();
 	$propertiesArray['names'] = array();
 	$propertiesArray['description'] = array();
 	$propertiesArray['city'] = array();
@@ -17,6 +18,7 @@ public function retrieveProperties(){
 	//echo"After Query inside the model";
 
 	foreach($query->result() as $property){
+		$propertiesArray['id'][] = $property->id;
 		$propertiesArray['names'][] = $property->name;
 		$propertiesArray['description'][] = $property->description;
 		$propertiesArray['city'][] = $property->city;

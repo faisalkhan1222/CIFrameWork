@@ -15,6 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<?php
 		for($i=0; $i<sizeof($names); $i++){
+			echo "<h3>ID </h3>".$id[$i];
 			echo "<h3>Specs </h3>".$names[$i];
 			echo "<h3>Description </h3>".$description[$i];
 			echo "<h3>City </h3>".$city[$i];
