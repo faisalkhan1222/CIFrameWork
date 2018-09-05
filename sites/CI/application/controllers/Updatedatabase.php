@@ -20,6 +20,15 @@ class Updatedatabase extends CI_Controller {
 
 	public function updatedata()
 	{
+		$id = 0;
+		if($_GET){
+			echo "Listing ID: ".$_GET['idOflisting'];
+			$id = $_GET['idOflisting'];
+		}
+
+
+
+
 		$this->load->model('Properties_model','',TRUE);
 		$names = $this->Properties_model->retrieveProperties();
 		$this->load->view('insertdata_form', $names);
@@ -27,7 +36,7 @@ class Updatedatabase extends CI_Controller {
 			$name = $_GET["name"];
 			$desc = $_GET["description"];
 			$this->load->model('UpdateData_model', '', TRUE);
-			$this->UpdateData_model->insertData($name,$desc);
+			$this->UpdateData_model->insertData($name,$desc,$id);
 			$names = $this->Properties_model->retrieveProperties();
 			$this->load->view('properties_listing',$names);
 		}	

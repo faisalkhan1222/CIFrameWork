@@ -21,7 +21,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			echo "<h3>City </h3>".$city[$i];
 			echo "<h3>Zip </h3>".$zip[$i];
 			echo $image[$i]."</br>";
+
+			$url = base_url()."index.php/Updatedatabase/updatedata?>";
+
+			echo"<form method='GET' action=".$url;
+				echo "<input type='hidden' name='idOflisting' value=".$id[$i].">";
+				echo "<input type='submit' value='Update Name OR Desc' />";
+			echo "</form>";
 			echo "<h1>--------------------------</h1>";
+
+
 		}
 	?>
 	<h2> </h2>
