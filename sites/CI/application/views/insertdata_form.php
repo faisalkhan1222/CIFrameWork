@@ -11,6 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div>
+
 	<h4>Update Database</h4>
 <form method="get" action="">
 	<label for "name">Name:</label>
@@ -18,6 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<label for "description"> Description: </label>
 	<input id="description" name="description" placeholder="Enter The New Description" type="Text"/>
 	<input type ="hidden" name="id" value="someID"/>
+	<input type ='hidden' name='idOflisting' value=<?php echo'"'.$id.'" />';?>
 	<input type="submit" value="Save"/>
 </form>
 </div>

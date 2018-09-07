@@ -20,26 +20,28 @@ class Updatedatabase extends CI_Controller {
 
 	public function updatedata()
 	{
-		$id = 0;
-		if($_GET){
-			echo "Listing ID: ".$_GET['idOflisting'];
-			$id = $_GET['idOflisting'];
+		//$this->load->model('Properties_model','',TRUE);
+		//$names = $this->Properties_model->retrieveProperties();
+		if(isset($_GET["idOflisting"])){
+		//	echo "Listing ID: ".$_GET['idOflisting'];
+			$id = ['id' => $_GET['idOflisting'],];
+
 		}
 
 
 
 
-		$this->load->model('Properties_model','',TRUE);
-		$names = $this->Properties_model->retrieveProperties();
-		$this->load->view('insertdata_form', $names);
 		if(isset($_GET["name"]) && isset($_GET["description"])){
+			echo"The value of id inside grt name is: ".$id['id'];
 			$name = $_GET["name"];
 			$desc = $_GET["description"];
 			$this->load->model('UpdateData_model', '', TRUE);
-			$this->UpdateData_model->insertData($name,$desc,$id);
-			$names = $this->Properties_model->retrieveProperties();
-			$this->load->view('properties_listing',$names);
+			$this->UpdateData_model->insertData($name,$desc,$id['id']);
+			redirect(base_url(), 'refresh');
+			//$names = $this->Properties_model->retrieveProperties();
+			//$this->load->view('properties_listing',$names);
 		}	
+		$this->load->view('insertdata_form',$id);
 	}
 }
 
