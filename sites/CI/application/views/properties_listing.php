@@ -29,8 +29,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				echo "<input type='submit' value='Update Name OR Desc' />";
 			echo "</form>";
 			echo "<h1>--------------------------</h1>";
-
-
 		}
 	?>
 	<h2> </h2>

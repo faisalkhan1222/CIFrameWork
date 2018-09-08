@@ -20,16 +20,11 @@ class Updatedatabase extends CI_Controller {
 
 	public function updatedata()
 	{
-		//$this->load->model('Properties_model','',TRUE);
-		//$names = $this->Properties_model->retrieveProperties();
+		
 		if(isset($_GET["idOflisting"])){
-		//	echo "Listing ID: ".$_GET['idOflisting'];
 			$id = ['id' => $_GET['idOflisting'],];
 
 		}
-
-
-
 
 		if(isset($_GET["name"]) && isset($_GET["description"])){
 			echo"The value of id inside grt name is: ".$id['id'];
@@ -38,8 +33,6 @@ class Updatedatabase extends CI_Controller {
 			$this->load->model('UpdateData_model', '', TRUE);
 			$this->UpdateData_model->insertData($name,$desc,$id['id']);
 			redirect(base_url(), 'refresh');
-			//$names = $this->Properties_model->retrieveProperties();
-			//$this->load->view('properties_listing',$names);
 		}	
 		$this->load->view('insertdata_form',$id);
 	}

@@ -11,7 +11,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div>
-
 	<h4>Update Database</h4>
 <form method="get" action="">
 	<label for "name">Name:</label>
